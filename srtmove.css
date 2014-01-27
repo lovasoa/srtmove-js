@@ -1,0 +1,62 @@
+html {
+	background-color:black;
+}
+
+body {
+	border-radius:5px;
+	box-shadow: 0 0 15px orangered;
+	padding:10px;
+	margin: 12vh auto;
+	background-color:orangered;
+	background:linear-gradient(red,orangered);
+	width:55%;
+	max-width:640px;
+}
+
+h1 {
+	text-align:center;
+}
+
+#logs {
+	font-family:monospace;
+	border:1px dashed black;
+	width:80%;
+	margin:auto;
+}
+
+input[type=text] {
+	border:0;
+	font-size:16px;
+	width:40px;
+	background:linear-gradient(#aaa,white);
+}
+
+body:hover {
+	box-shadow: 0 0 25px orangered;
+	transition:1s;
+}
+#download {
+	text-align:center;
+	font-size:1.3em;
+	color:black;
+	font-weight:bold;
+	margin: 20px auto;
+	width:70%;
+	background:linear-gradient(#aaa,white);
+	border-radius:5px;
+	border:1px solid black;
+	display:block;
+}
+
+@media (max-width: 640px) {
+	html {
+		height:100%;
+		width:100%;
+	}
+	body {
+		margin:0;
+		border-radius:0;
+		height:100%;
+		width:100%;
+	}
+}

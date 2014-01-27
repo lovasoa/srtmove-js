@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>SRTmove</title>
+	<link rel="stylesheet" href="srtmove.css"/>
+</head>
+
+<body>
+<h1>SRTmove</h1>
+<form>
+	<p>
+		Action:<br/>
+		<input type="radio" name="action" id="positive" checked><label for="positive">avancer</label>
+		<input type="radio" name="action" id="negative"><label for="negative">reculer</label>
+	</p>
+	<p>
+		Temps de décalage:<br/>
+		<input id="mn" type="text" placeholder="00" size="2"/> <label for="mn">mn</label> et 
+		<input id="s" type="text" placeholder="00" size="2" /> <label for="s">s</label>
+	</p>
+	<p>
+		<label for="srtchoose">Sous-titres:</label>
+		<input id="srtchoose" type="file" />
+	</p>
+</form>
+
+<a href="#" id="download" >Enregistrer les nouveaux sous-titres</a>
+<div id="logs"></div>
+
+<small>Vous pouvez enregistrer cette page sur votre disque (avec Ctrl-S)
+si vous voulez pouvoir l’utiliser hors ligne.</small>
+<script src="srtmove.js"></script>
+</body>
+</html>
