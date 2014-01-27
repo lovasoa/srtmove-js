@@ -56,21 +56,24 @@ function srtmove () {
 		for (var i=0; i<subs.length; i++) {
 			var sub = subs[i].split("\n");
 			if (sub.length < 3) continue; //invalid sub
-			var interval = sub[1].split(" --> ").map(time2num);
+			var intline = sub[1].split(" ");
+			var endintline = (intline.length==4) ? " "+intline[3] : "";
+			var interval = [intline[0], intline[2]].map(time2num);
 			var int = interval.map(function(n){return num2time(n+addition)});
 			if (interval[0] > -addition && interval[1] > -addition) {
 				newSubFileLines.push(
-						subnum + "\n" +
-						int[0] + " --> " + int[1] + "\n" +
-						sub.slice(2).join("\n")
+						subnum + "\r\n" +
+						int[0] + " --> " + int[1] + endintline + "\r\n" +
+						sub.slice(2).join("\r\n")
 				);
 				subnum++;
 			}
 		}
-		log("Nouveaux sous-titres calculés en "+ (Date.now()-t) + "ms");
+		log("Nouveaux sous-titres calculÃ©s en "+ (Date.now()-t) + "ms");
 		anchor.download = file.name.replace(".srt", "-resynced.srt");
-		anchor.href = "data:," + encodeURIComponent(newSubFileLines.join("\n\n"));
+		anchor.href = "data:," + encodeURIComponent(newSubFileLines.join("\r\n\r\n"));
 	};
 	r.readAsText(file);
 };
 anchor.addEventListener("mousedown", srtmove, true);
+
