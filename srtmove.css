@@ -1,20 +1,29 @@
 html {
-	background-color:black;
+	background-color:#4cc;
+	background:radial-gradient(#4cc,#8ff);
 }
 
 body {
 	border-radius:5px;
-	box-shadow: 0 0 15px orangered;
+	box-shadow: 0 0 15px #fff;
 	padding:10px;
 	margin: 12vh auto;
-	background-color:orangered;
-	background:linear-gradient(red,orangered);
+	background-color:#07d;
+	background:linear-gradient(#07D,#18f);
 	width:55%;
 	max-width:640px;
+	color:#024;
+}
+
+body:hover {
+	box-shadow: 1px 1px 25px #fff;
+	transition:1s;
 }
 
 h1 {
 	text-align:center;
+	text-decoration:underline;
+	text-shadow:0 0 2px white;
 }
 
 #logs {
@@ -26,26 +35,31 @@ h1 {
 
 input[type=text] {
 	border:0;
+	border-radius:3px;
 	font-size:16px;
 	width:40px;
 	background:linear-gradient(#aaa,white);
 }
 
-body:hover {
-	box-shadow: 0 0 25px orangered;
-	transition:1s;
-}
 #download {
 	text-align:center;
-	font-size:1.3em;
-	color:black;
+	font-size:.9em;
+	color:#021;
 	font-weight:bold;
 	margin: 20px auto;
 	width:70%;
-	background:linear-gradient(#aaa,white);
+	background:linear-gradient(#3f5,#1d3);
 	border-radius:5px;
-	border:1px solid black;
+	border:2px solid #0a0;
 	display:block;
+	padding:5px;
+	text-decoration:none;
+	transition:.5s;
+}
+
+#download:hover {
+	box-shadow: 0 0 5px #0a0;
+	transition:.5s;
 }
 
 @media (max-width: 640px) {
