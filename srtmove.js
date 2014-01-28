@@ -69,10 +69,11 @@ function srtmove () {
 				subnum++;
 			}
 		}
-		log("Nouveaux sous-titres calculés en "+ (Date.now()-t) + "ms");
+		log("Nouveaux sous-titres calculÃ©s en "+ (Date.now()-t) + "ms");
 		anchor.download = file.name.replace(".srt", "-resynced.srt");
 		anchor.href = "data:," + encodeURIComponent(newSubFileLines.join("\r\n\r\n"));
 	};
 	r.readAsText(file);
 };
 anchor.addEventListener("mousedown", srtmove, true);
+
